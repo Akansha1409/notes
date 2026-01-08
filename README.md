@@ -108,8 +108,78 @@ Fetches all notes from the database, sorted by creation date (newest first).
   ]
 }
 ```
+### 2. Create a Note
+Adds a new note to the database.
+
+* **URL:** `/api/notes`
+* **Method:** `POST`
+* **Headers:** `Content-Type: application/json`
+* **Request Body:**
+```json
+{
+  "title": "Meeting Notes",
+  "content": "Discuss the new UI design at 4 PM."
+}
+```
+* **Response:**
+
+```json
+{
+  "message": "Note Created"
+}
+```
+
+### 3. Get Single Note
+Fetches a specific note by its ID (used for the Edit page).
+
+* **URL:** `/api/notes/:id`
+* **Method:** `GET`
+* **Example:** `/api/notes/65a1234567890abcdef12345`
+* **Response:**
+```json
+{
+  "note": {
+    "_id": "65a1234567890abcdef12345",
+    "title": "Meeting Notes",
+    "content": "Discuss the new UI design at 4 PM.",
+    "createdAt": "2023-10-25T10:00:00.000Z",
+    "updatedAt": "2023-10-25T10:00:00.000Z"
+  }
+}
+```
+
+### 4. Update a Note
+Updates the title and content of an existing note.
+
+* **URL:** `/api/notes/:id`
+* **Method:** `PUT`
+* **Headers:** `Content-Type: application/json`
+* **Request Body:**
+```json
+{
+  "newTitle": "Updated Meeting Notes",
+  "newContent": "Meeting rescheduled to 5 PM."
+}
+```
+* **Response:**
+
+```json
+
+{
+  "message": "Note updated"
+}
+```
+
+### 5. Delete a Note
+Permanently removes a note from the database.
+
+* **URL:** `/api/notes/:id`
+* **Method:** `DELETE`
+* **Response:**
+```json
+{
+  "message": "Note deleted"
+}
+```
 ---
-
-
-    
        
