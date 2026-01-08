@@ -64,7 +64,7 @@ Make sure you have the following installed on your machine:
 
      ---
 
-📂 Project Structure
+## 📂 Project Structure
 ```bash
 
 ├── src/
@@ -84,6 +84,30 @@ Make sure you have the following installed on your machine:
 └── package.json             # Project dependencies
 ```
 
+---
+
+## 📡 API Documentation
+
+### 1. Get All Notes
+Fetches all notes from the database, sorted by creation date (newest first).
+
+* **URL:** `/api/notes`
+* **Method:** `GET`
+* **Response:**
+```json
+{
+  "notes": [
+    {
+      "_id": "65a1234567890abcdef12345",
+      "title": "Project Idea",
+      "content": "Build a Next.js app with MongoDB...",
+      "createdAt": "2023-10-25T10:00:00.000Z",
+      "updatedAt": "2023-10-25T10:00:00.000Z",
+      "__v": 0
+    }
+  ]
+}
+```
 ---
 
 
