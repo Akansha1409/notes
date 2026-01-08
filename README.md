@@ -3,7 +3,6 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel)
 
 A full-stack **CRUD (Create, Read, Update, Delete)** application built with **Next.js 15 (App Router)** and **MongoDB**. This project features a modern, responsive UI designed with Tailwind CSS, utilizing glassmorphism, gradients, and smooth hover effects.
 
@@ -30,16 +29,6 @@ A full-stack **CRUD (Create, Read, Update, Delete)** application built with **Ne
 
 ---
 
-## 📸 Screenshots
-
-*(Optional: Add screenshots of your app here)*
-
-| Home Page | Add Note Page |
-|:---:|:---:|
-| ![Home](https://via.placeholder.com/600x400?text=Home+Page+Preview) | ![Add Note](https://via.placeholder.com/600x400?text=Add+Note+Preview) |
-
----
-
 ## ⚙️ Getting Started
 
 Follow these steps to set up the project locally on your machine.
@@ -57,3 +46,46 @@ Make sure you have the following installed on your machine:
    ```bash
    git clone [https://github.com/](https://github.com/)<YOUR-USERNAME>/nextjs-mongodb-notes-app.git
    cd nextjs-mongodb-notes-app
+   ```
+
+ 2. **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+ 3. **Set Up Evironment Variables**
+    ```bash
+    MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/notes_db
+    ```
+ 4. **Run the Development Server**
+    ```bash
+    npm run dev
+    ```
+
+     ---
+
+📂 Project Structure
+```bash
+
+├── src/
+│   ├── app/
+│   │   ├── api/notes/       # Backend API routes
+│   │   ├── addNote/         # Page to create notes
+│   │   ├── editNote/[id]/   # Page to update notes
+│   │   ├── globals.css      # Global styles
+│   │   ├── layout.js        # Root layout with Navbar
+│   │   └── page.js          # Home page (Notes List)
+│   ├── components/          # Reusable UI components
+│   ├── libs/                # MongoDB connection logic
+│   └── models/              # Mongoose Schema
+├── public/                  # Static assets
+├── .env.local               # Environment variables (Ignored by Git)
+├── tailwind.config.js       # Tailwind configuration
+└── package.json             # Project dependencies
+```
+
+---
+
+
+    
+       
